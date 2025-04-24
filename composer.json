@@ -1,0 +1,37 @@
+{
+  "name": "netivo/wc-product-meters",
+  "description": "Netivo Module for Woocommerce to add Meters Product Type",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "version": "1.0",
+  "authors": [
+    {
+      "name": "netivo",
+      "email": "biuro@netivo.pl"
+    },
+    {
+      "name": "Michał Świątek",
+      "email": "michal.swiatek@netivo.pl"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:netivo/wp-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:netivo/wp-core-woocommerce.git"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "netivo/wp-core": "dev-master",
+    "netivo/woocommerce": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Netivo\\Module\\Woocommerce\\Meters\\": "src/Woocommerce"
+    }
+  }
+}
