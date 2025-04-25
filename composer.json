@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Netivo\\Module\\Woocommerce\\Meters\\": "src/Woocommerce"
+      "Netivo\\Module\\WooCommerce\\Meters\\": "src/"
     }
   }
 }

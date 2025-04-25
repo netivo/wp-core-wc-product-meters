@@ -16,7 +16,7 @@ use WC_Order_Item_Product;
 /**
  * Class Meters
  */
-class ProductType extends \Netivo\Woocommerce\Product\Type {
+class ProductType extends \Netivo\WooCommerce\Product\Type {
 
 	/**
 	 * Registers new product type.
@@ -151,10 +151,13 @@ class ProductType extends \Netivo\Woocommerce\Product\Type {
 	public static function display_price_options(): void {
 		global $post, $thepostid, $product_object;
 
-		$filename = __DIR__ . '/../../views/admin/product/meters-settings.phtml';
-		wp_nonce_field( 'save_product_meters', 'product_meters_nonce' );
+		$file = realpath( __DIR__ . '/../views/admin/product/meters-settings.phtml' );
 
-		include $filename;
+		if ( file_exists( $file ) ) {
+			include $file;
+		} else {
+			throw new \Exception( "There is no view file for this admin action" );
+		}
 	}
 
 
